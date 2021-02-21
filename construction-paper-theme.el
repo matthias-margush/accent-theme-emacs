@@ -280,7 +280,7 @@
    `(ivy-minibuffer-match-face-2 ((t (:weight bold :foreground ,construction-paper-theme--keyword))))
    `(ivy-minibuffer-match-face-3 ((t (:weight bold :foreground ,construction-paper-theme--keyword))))
    `(ivy-minibuffer-match-face-4 ((t (:weight bold :foreground ,construction-paper-theme--keyword))))
-   `(ivy-highlight-face ((t (:inherit region))))
+   `(ivy-highlight-face ((t (:underline (:color ,construction-paper-theme--highlight-background)))))
    `(ivy-remote ((t (:foreground ,construction-paper-theme--link))))
 
    ;; hydra
