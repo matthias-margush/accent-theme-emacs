@@ -56,7 +56,7 @@
        (construction-paper-theme--block construction-paper-theme--light-medium)
        (construction-paper-theme--highlight-background construction-paper-theme--sky)
        (construction-paper-theme--text construction-paper-theme--shadow-dark)
-       (construction-paper-theme--inverted-text construction-paper-theme--shadow-dark)
+       (construction-paper-theme--inverted-text construction-paper-theme--light-bright)
        (construction-paper-theme--highlight-foreground construction-paper-theme--shadow-dark)
        (construction-paper-theme--deemphasize construction-paper-theme--shadow-bright)
        (construction-paper-theme--keyword construction-paper-theme--bark)
