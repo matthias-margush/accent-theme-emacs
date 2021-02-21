@@ -455,19 +455,19 @@
 
    `(csv-separator-face ((t (:foreground ,construction-paper-theme--keyword))))
 
-   `(diff-added ((t (:foreground ,construction-paper-theme--highlight-background))))
+   `(diff-added ((t (:foreground ,construction-paper-theme--moss))))
    `(diff-changed ((t (:foreground ,construction-paper-theme--changed))))
-   `(diff-removed ((t (:foreground ,construction-paper-theme--keyword))))
-   `(diff-header ((t (:background ,construction-paper-theme--text :foreground ,construction-paper-theme--background))))
-   `(diff-file-header ((t (:background ,construction-paper-theme--text :foreground ,construction-paper-theme--background))))
-   `(diff-hunk-header ((t (:background ,construction-paper-theme--text :foreground ,construction-paper-theme--link))))
+   `(diff-removed ((t (:foreground ,construction-paper-theme--fire))))
+   `(diff-header ((t (:background ,construction-paper-theme--background-medium :foreground ,construction-paper-theme--text))))
+   `(diff-file-header ((t (:background ,construction-paper-theme--background-medium :foreground ,construction-paper-theme--link))))
+   `(diff-hunk-header ((t (:background ,construction-paper-theme--background-medium :foreground ,construction-paper-theme--link))))
    `(diff-refine-added ((t (:background ,construction-paper-theme--added :foreground ,construction-paper-theme--inverted-text))))
    `(diff-refine-changed ((t (:background ,construction-paper-theme--changed :foreground ,construction-paper-theme--inverted-text))))
    `(diff-refine-removed ((t (:background ,construction-paper-theme--removed :foreground ,construction-paper-theme--inverted-text))))
 
-   `(diff-hl-change ((t (:foreground "blue3" :background ,construction-paper-theme--changed))))
-   `(diff-hl-delete ((t (:foreground "red3" :background ,construction-paper-theme--removed))))
-   `(diff-hl-insert ((t (:foreground "green4" :background ,construction-paper-theme--added))))
+   `(diff-hl-change ((t (:foreground ,construction-paper-theme--changed :background ,construction-paper-theme--changed))))
+   `(diff-hl-delete ((t (:foreground ,construction-paper-theme--removed :background ,construction-paper-theme--removed))))
+   `(diff-hl-insert ((t (:foreground ,construction-paper-theme--added :background ,construction-paper-theme--added))))
 
    `(ediff-even-diff-A ((t (:foreground nil :background nil :inverse-video t))))
    `(ediff-even-diff-B ((t (:foreground nil :background nil :inverse-video t))))
