@@ -102,7 +102,7 @@
    `(outline-6 ((t (:weight bold :foreground ,construction-paper-theme--text))))
    `(outline-7 ((t (:weight bold :foreground ,construction-paper-theme--text))))
    `(outline-8 ((t (:weight bold :foreground ,construction-paper-theme--text))))
-   `(region ((t (:background ,construction-paper-theme--highlight-background :foreground ,construction-paper-theme--highlight-foreground))))
+   `(region ((t (:background ,construction-paper-theme--highlight-background))))
    `(secondary-selection ((t (:background ,construction-paper-theme--text :foreground ,construction-paper-theme--background))))
    `(error ((t (:foreground ,construction-paper-theme--alert :weight bold))))
    `(warning ((t (:foreground ,construction-paper-theme--doc :weight bold))))
@@ -313,18 +313,18 @@
    `(neo-vc-user-face ((t (:foreground ,construction-paper-theme--alert :slant italic))))
 
    ;; Search
-   `(lazy-highlight-background ((t (:background ,construction-paper-theme--find :foreground ,construction-paper-theme--highlight-foreground :weight normal))))
-   `(match ((t (:foreground ,construction-paper-theme--highlight-foreground :background ,construction-paper-theme--text :inverse-video t))))
-   `(isearch ((t (:foreground ,construction-paper-theme--highlight-foreground :background ,construction-paper-theme--sky :weight bold))))
-   `(isearch-lazy-highlight-background-face ((t (:foreground ,construction-paper-theme--highlight-foreground :box ,construction-paper-theme--find))))
-   `(lazy-highlight ((t (:foreground ,construction-paper-theme--highlight-foreground :underline (:color ,construction-paper-theme--sky)))))
+   `(lazy-highlight-background ((t (:background ,construction-paper-theme--find :weight normal))))
+   `(match ((t (:background ,construction-paper-theme--highlight-foreground))))
+   `(isearch ((t (:background ,construction-paper-theme--sky :weight bold))))
+   `(isearch-lazy-highlight-background-face ((t (:box ,construction-paper-theme--find))))
+   `(lazy-highlight ((t (:underline (:color ,construction-paper-theme--fire)))))
    `(isearch-fail ((t (:foreground ,construction-paper-theme--alert))))
 
    ;; evil
    `(evil-search-highlight-background-persist-highlight-background-face ((t (:background ,construction-paper-theme--find :inherit font-lock-warning-face :inverse-video t))))
    `(evil-ex-lazy-highlight ((t (:foreground ,construction-paper-theme--inverted-text :background ,construction-paper-theme--find))))
    `(evil-ex-info ((t (:foreground ,construction-paper-theme--good))))
-   `(evil-ex-substitute-replacement ((t (:foreground ,construction-paper-theme--alert))))
+   `(evil-ex-substitute-replacement ((t (:underline (:color ,construction-paper-theme--moss)))))
 
    ;; Popups
    `(popup-face ((t (:foreground ,construction-paper-theme--text :background ,construction-paper-theme--added))))
