@@ -37,14 +37,14 @@
 
 (require 'construction-paper-theme)
 
-(let* ((construction-paper-theme--added "#E5F5DE")
+(let* ((construction-paper-theme--added "#EFEFFF")
        (construction-paper-theme--alert construction-paper-theme--fire)
        (construction-paper-theme--link construction-paper-theme--water)
        (construction-paper-theme--good construction-paper-theme--moss)
-       (construction-paper-theme--removed "#F5E5DE")
-       (construction-paper-theme--changed "#F6F230")
+       (construction-paper-theme--removed "#FFEFEF")
+       (construction-paper-theme--changed "#FFFFE2")
        (construction-paper-theme--warning construction-paper-theme--sun)
-       (construction-paper-theme--find construction-paper-theme--sky)
+       (construction-paper-theme--find "#EFEFFF")
        (construction-paper-theme--background construction-paper-theme--light-bright)
        (construction-paper-theme--background-medium construction-paper-theme--light-medium)
        (construction-paper-theme--background-dark construction-paper-theme--light-dark)
