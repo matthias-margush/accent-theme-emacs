@@ -42,7 +42,7 @@
        (construction-paper-theme--link construction-paper-theme--water)
        (construction-paper-theme--good construction-paper-theme--moss)
        (construction-paper-theme--removed "#F5E5DE")
-       (construction-paper-theme--changed construction-paper-theme--sun)
+       (construction-paper-theme--changed "#F6F230")
        (construction-paper-theme--warning construction-paper-theme--sun)
        (construction-paper-theme--find construction-paper-theme--sky)
        (construction-paper-theme--background construction-paper-theme--light-bright)
