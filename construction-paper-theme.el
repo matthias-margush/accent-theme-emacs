@@ -43,7 +43,7 @@
 (defvar construction-paper-theme--shadow-medium "#405057")
 (defvar construction-paper-theme--shadow-bright "#687A8D")
 (defvar construction-paper-theme--light-dark "#E3DCCA")
-(defvar construction-paper-theme--light-medium "#f8f8f8")
+(defvar construction-paper-theme--light-medium "#f0ecea")
 (defvar construction-paper-theme--light-bright "#F9F9F9")
 (defvar construction-paper-theme--moss "#557755")
 (defvar construction-paper-theme--fire "#884444")
@@ -316,8 +316,8 @@
    `(lazy-highlight-background ((t (:background ,construction-paper-theme--find :weight normal))))
    `(match ((t (:background ,construction-paper-theme--highlight-foreground))))
    `(isearch ((t (:background ,construction-paper-theme--sky :weight bold))))
-   `(isearch-lazy-highlight-background-face ((t (:box ,construction-paper-theme--find))))
-   `(lazy-highlight ((t (:underline (:color ,construction-paper-theme--fire)))))
+   `(isearch-lazy-highlight-background-face ((t (:box ,construction-paper-theme--added))))
+   `(lazy-highlight ((t (:background "#F3F3FF"))))
    `(isearch-fail ((t (:foreground ,construction-paper-theme--alert))))
 
    ;; evil
@@ -657,7 +657,7 @@
    `(markdown-link-face ((t (:foreground ,construction-paper-theme--link :underline t))))
 
    `(hl-sexp-face ((t (:background ,construction-paper-theme--text))))
-   `(hl-line ((t (:background  "#FFEFE2"))))
+   `(hl-line ((t (:background ,construction-paper-theme--background-medium))))
    `(highlight-background-80+ ((t (:background ,construction-paper-theme--text))))
    `(highlight ((t (:background ,construction-paper-theme--changed :foreground ,construction-paper-theme--inverted-text))))
 
