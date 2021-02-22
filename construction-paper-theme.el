@@ -465,9 +465,9 @@
    `(diff-refine-changed ((t (:background "#FCFCCC"))))
    `(diff-refine-removed ((t (:background "#F6CCCC"))))
 
-   `(diff-hl-change ((t (:foreground ,construction-paper-theme--changed :background ,construction-paper-theme--changed))))
-   `(diff-hl-delete ((t (:foreground ,construction-paper-theme--removed :background ,construction-paper-theme--removed))))
-   `(diff-hl-insert ((t (:foreground ,construction-paper-theme--added :background ,construction-paper-theme--added))))
+   `(diff-hl-change ((t (:foreground "#FCFCCC" :background "#FCFCCC"))))
+   `(diff-hl-delete ((t (:foreground "#F6CCCC" :background "#F6CCCC"))))
+   `(diff-hl-insert ((t (:foreground "#CCDFFC" :background "#CCDFCC"))))
 
    `(ediff-even-diff-A ((t (:foreground nil :background nil :inverse-video t))))
    `(ediff-even-diff-B ((t (:foreground nil :background nil :inverse-video t))))
