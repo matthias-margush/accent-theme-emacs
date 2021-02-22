@@ -91,6 +91,7 @@
    `(gui-element ((t (:background ,construction-paper-theme--text :foreground ,construction-paper-theme--added))))
    `(highlight-background ((t (:background ,construction-paper-theme--background))))
    `(link ((t (:foreground ,construction-paper-theme--link :underline t))))
+   `(xref-match ((t (:foreground ,construction-paper-theme--link :underline t))))
    `(link-visited ((t (:foreground ,construction-paper-theme--link))))
    `(minibuffer-prompt ((t (:inherit default :inverse-video nil))))
    `(helpful-heading ((t (:inherit variable-pitch :height 1.4 :foreground ,construction-paper-theme--text))))
@@ -583,7 +584,6 @@
    `(term-color-blue ((t (:foreground ,construction-paper-theme--keyword :background ,construction-paper-theme--keyword))))
    `(term-color-magenta ((t (:foreground ,construction-paper-theme--link :background ,construction-paper-theme--link))))
 
-   `(link ((t (:foreground nil :underline t))))
    `(widget-button ((t (:underline t))))
    `(widget-field ((t (:background ,construction-paper-theme--background :box (:line-width 1 :color ,construction-paper-theme--text)))))
    `(widget-button-pressed ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--fire))))
@@ -659,7 +659,7 @@
    `(hl-sexp-face ((t (:background ,construction-paper-theme--text))))
    `(hl-line ((t (:background ,construction-paper-theme--background-medium))))
    `(highlight-background-80+ ((t (:background ,construction-paper-theme--text))))
-   `(highlight ((t (:background ,construction-paper-theme--changed :foreground ,construction-paper-theme--inverted-text))))
+   `(highlight ((t (:background ,construction-paper-theme--added))))
 
    ;; Python-specific overrides
    `(py-builtins-face ((t (:foreground ,construction-paper-theme--keyword :weight normal))))
