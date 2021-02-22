@@ -40,7 +40,7 @@
 
 ;;; Code:
 (defvar construction-paper-theme--shadow-dark "#312E2A")
-(defvar construction-paper-theme--shadow-medium "#405057")
+(defvar construction-paper-theme--shadow-medium "#504F4D")
 (defvar construction-paper-theme--shadow-bright "#687A8D")
 (defvar construction-paper-theme--light-dark "#E3DCCA")
 (defvar construction-paper-theme--light-medium "#f0ecea")
@@ -414,7 +414,7 @@
    `(company-scrollbar-bg ((t (:background ,construction-paper-theme--highlight-background))))
    `(company-scrollbar-fg ((t (:background ,construction-paper-theme--alert))))
    `(company-template-field ((t (:inherit region :background ,construction-paper-theme--highlight-background :foreground ,construction-paper-theme--text))))
-   `(company-tooltip ((t (:background ,construction-paper-theme--inverted-background :foreground ,construction-paper-theme--inverted-text))))
+   `(company-tooltip ((t (:background ,construction-paper-theme--inverted-background-medium :foreground ,construction-paper-theme--inverted-text))))
    `(company-tooltip-annotation ((t (:foreground ,construction-paper-theme--alert))))
    `(company-tooltip-common ((t (:background ,construction-paper-theme--text :foreground ,construction-paper-theme--link))))
    `(company-tooltip-selection ((t (:background ,construction-paper-theme--highlight-background))))
@@ -598,8 +598,8 @@
    `(compilation-mode-line-run ((t (:foreground ,construction-paper-theme--keyword))))
 
    ;; tooltip
-   `(tool-tip ( (t (:background ,construction-paper-theme--inverted-background :foreground ,construction-paper-theme--inverted-text))))
-   `(tooltip ( (t (:foreground ,construction-paper-theme--background :background ,construction-paper-theme--text))))
+   `(tool-tip ((t (:background ,construction-paper-theme--inverted-background-medium :foreground ,construction-paper-theme--inverted-text))))
+   `(tooltip ((t (:background ,construction-paper-theme--inverted-background-medium :foreground ,construction-paper-theme--inverted-text))))
 
    ;; Grep
    `(grep-context-face ((t (:foreground ,construction-paper-theme--doc))))
