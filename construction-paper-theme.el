@@ -657,7 +657,7 @@
    `(markdown-link-face ((t (:foreground ,construction-paper-theme--link :underline t))))
 
    `(hl-sexp-face ((t (:background ,construction-paper-theme--text))))
-   `(hl-line ((t (:background ,construction-paper-theme--highlight-background :foreground ,construction-paper-theme--highlight-foreground :weight normal))))
+   `(hl-line ((t (:background  "#FFEFE2"))))
    `(highlight-background-80+ ((t (:background ,construction-paper-theme--text))))
    `(highlight ((t (:background ,construction-paper-theme--changed :foreground ,construction-paper-theme--inverted-text))))
 
