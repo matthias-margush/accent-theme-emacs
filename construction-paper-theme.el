@@ -51,7 +51,7 @@
 (defvar construction-paper-theme--sky "#CFE2FF")
 (defvar construction-paper-theme--bark "#c6783e")
 (defvar construction-paper-theme--soil "#B2A488")
-(defvar construction-paper-theme--sun "#C6C200")
+(defvar construction-paper-theme--sun "#F6F0A4")
 
 (defvar construction-paper-theme--added)
 (defvar construction-paper-theme--changed)
@@ -465,7 +465,7 @@
    `(diff-refine-changed ((t (:background "#FCFCCC"))))
    `(diff-refine-removed ((t (:background "#F6CCCC"))))
 
-   `(diff-hl-change ((t (:foreground "#FCFCCC" :background "#FCFCCC"))))
+   `(diff-hl-change ((t (:foreground ,construction-paper-theme--sun :background ,construction-paper-theme--sun))))
    `(diff-hl-delete ((t (:foreground "#F6CCCC" :background "#F6CCCC"))))
    `(diff-hl-insert ((t (:foreground "#CCDFFC" :background "#CCDFCC"))))
 
