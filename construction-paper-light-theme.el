@@ -59,7 +59,7 @@
        (construction-paper-theme--highlight-foreground construction-paper-theme--shadow-dark)
        (construction-paper-theme--deemphasize construction-paper-theme--shadow-bright)
        (construction-paper-theme--keyword construction-paper-theme--bark)
-       (construction-paper-theme--doc construction-paper-theme--shadow-bright)
+       (construction-paper-theme--doc construction-paper-theme--shadow-medium)
        (construction-paper-theme--nav construction-paper-theme--bark))
 
   (construction-paper-theme 'construction-paper-light)

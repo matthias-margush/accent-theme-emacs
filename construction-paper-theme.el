@@ -114,7 +114,7 @@
    `(highlight-indentation-face ((t (:background ,construction-paper-theme--light-dark))))
 
    ;; mode line
-   `(mode-line ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--inverted-background :box nil :underline nil :weight normal :inverse-video nil))))
+   `(mode-line ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--good :box nil :underline nil :weight normal :inverse-video nil))))
    `(mode-line-inactive ((t (:inherit mode-line))))
    `(mode-line-buffer-id ((t (:inherit mode-line))))
    `(mode-line-buffer-id-inactive ((t (:inherit mode-line-inactive))))
@@ -631,7 +631,7 @@
    `(org-document-info-keyword ((t (:foreground ,construction-paper-theme--keyword))))
    `(org-document-title ((t (:foreground ,construction-paper-theme--text :weight bold))))
    `(org-done ((t (:inherit default :foreground ,construction-paper-theme--doc :strike-through t))))
-   `(org-headline-done ((t (:foreground ,construction-paper-theme--highlight-background :strike-through t))))
+   `(org-headline-done ((t (:foreground ,construction-paper-theme--doc :strike-through t))))
    `(org-ellipsis ((t (:foreground ,construction-paper-theme--doc))))
    `(org-footnote ((t (:foreground ,construction-paper-theme--keyword))))
    `(org-formula ((t (:foreground ,construction-paper-theme--keyword))))
@@ -647,7 +647,7 @@
    `(org-property-value ((t (:foreground ,construction-paper-theme--keyword))))
    `(org-table ((t (:foreground ,construction-paper-theme--link))))
    `(org-tag ((t (:foreground ,construction-paper-theme--doc))))
-   `(org-todo ((t (:inherit default :foreground ,construction-paper-theme--added))))
+   `(org-todo ((t (:inherit default :foreground ,construction-paper-theme--alert))))
    `(org-upcoming-deadline ((t (:foreground ,construction-paper-theme--keyword))))
    `(org-warning ((t (:weight bold :foreground ,construction-paper-theme--keyword))))
    `(org-mode-line-clock-overrun ((t (:weight bold :foreground ,construction-paper-theme--inverted-text :background ,construction-paper-theme--alert))))
