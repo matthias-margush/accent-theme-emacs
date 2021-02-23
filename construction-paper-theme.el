@@ -828,7 +828,7 @@
    `(eshell-ls-special ((t (:foreground ,construction-paper-theme--alert :weight normal))))
    `(eshell-ls-symlink ((t (:foreground ,construction-paper-theme--link :weight normal))))
    `(eshell-ls-unreadable ((t (:foreground ,construction-paper-theme--deemphasize))))
-   `(eshell-prompt ((t (:foreground ,construction-paper-theme--alert :weight normal))))
+   `(eshell-prompt ((t (:foreground ,construction-paper-theme--keyword :weight normal))))
 
    ;; custom
    `(custom-variable-tag ((t (:foreground ,construction-paper-theme--keyword))))
