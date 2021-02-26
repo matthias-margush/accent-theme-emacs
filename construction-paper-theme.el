@@ -111,6 +111,9 @@
    `(header-line ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--good))))
    `(escape-glyph ((t (:foreground ,construction-paper-theme--link))))
 
+   `(tab-active ((t (:inherit outline-5 :foreground ,construction-paper-theme--moss :weight bold))))
+   `(tab-inactive ((t (:inherit outline-5))))
+
    `(highlight-indentation-face ((t (:background ,construction-paper-theme--light-dark))))
 
    ;; mode line
@@ -216,9 +219,9 @@
    `(anzu-replace-to ((t (:background ,construction-paper-theme--good :foreground ,construction-paper-theme--inverted-text))))
 
    ;; spacebar
-   `(spacebar-persp ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :weight bold :height 1.0))))
-   `(spacebar-active ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :weight bold :height 1.25))))
-   `(spacebar-inactive ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :weight normal :height 0.9))))
+   `(spacebar-persp ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :height 1.0))))
+   `(spacebar-active ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :height 0.9 :weight bold))))
+   `(spacebar-inactive ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--text :weight normal :height 0.9))))
 
    ;; smerge
    `(smerge-base ((t (:foreground ,construction-paper-theme--water))))
