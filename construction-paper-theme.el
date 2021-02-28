@@ -422,13 +422,14 @@
    `(company-preview ((t (:foreground ,construction-paper-theme--text))))
    `(company-preview-common ((t (:weight bold :foreground ,construction-paper-theme--text))))
    `(company-preview-search ((t (:weight bold :foreground ,construction-paper-theme--text))))
-   `(company-scrollbar-bg ((t (:background ,construction-paper-theme--highlight-background))))
-   `(company-scrollbar-fg ((t (:background ,construction-paper-theme--alert))))
+   `(company-scrollbar-bg ((t (:background ,construction-paper-theme--inverted-background))))
+   `(company-scrollbar-fg ((t (:background ,construction-paper-theme--inverted-background))))
    `(company-template-field ((t (:inherit region :background ,construction-paper-theme--highlight-background :foreground ,construction-paper-theme--text))))
    `(company-tooltip ((t (:background ,construction-paper-theme--inverted-background-medium :foreground ,construction-paper-theme--inverted-text))))
    `(company-tooltip-annotation ((t (:foreground ,construction-paper-theme--alert))))
-   `(company-tooltip-common ((t (:background ,construction-paper-theme--text :foreground ,construction-paper-theme--link))))
-   `(company-tooltip-selection ((t (:background ,construction-paper-theme--highlight-background))))
+   `(company-tooltip-common ((t (:background ,construction-paper-theme--inverted-background-medium :foreground ,construction-paper-theme--inverted-text))))
+   `(company-tooltip-common-selection ((t (:weight bold :background ,construction-paper-theme--inverted-background-medium :foreground ,construction-paper-theme--inverted-text))))
+   `(company-tooltip-selection ((t (:weight bold :background ,construction-paper-theme--inverted-background :foreground ,construction-paper-theme--inverted-text))))
 
    ;; which-function
    `(which-func ((t (:foreground ,construction-paper-theme--keyword :background nil :weight bold))))
