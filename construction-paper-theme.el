@@ -51,7 +51,8 @@
 (defvar construction-paper-theme--sky "#CFE2FF")
 (defvar construction-paper-theme--bark "#c6783e")
 (defvar construction-paper-theme--soil "#B2A488")
-(defvar construction-paper-theme--sun "#F6F0A4")
+;; (defvar construction-paper-theme--sun "#C6C200")
+(defvar construction-paper-theme--sun "#BBBB69")
 
 (defvar construction-paper-theme--added)
 (defvar construction-paper-theme--changed)
@@ -108,7 +109,8 @@
    `(error ((t (:foreground ,construction-paper-theme--alert :weight bold))))
    `(warning ((t (:foreground ,construction-paper-theme--doc :weight bold))))
    `(success ((t (:foreground ,construction-paper-theme--keyword :weight bold))))
-   `(header-line ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--good))))
+   `(header-line ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--good :box (:color ,construction-paper-theme--background :line-width 10) :underline nil :weight normal))))
+
    `(escape-glyph ((t (:foreground ,construction-paper-theme--link))))
 
    `(tab-active ((t (:inherit outline-5 :foreground ,construction-paper-theme--moss :weight bold))))
@@ -117,7 +119,7 @@
    `(highlight-indentation-face ((t (:background ,construction-paper-theme--light-dark))))
 
    ;; mode line
-   `(mode-line ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--good :box nil :underline nil :weight normal :inverse-video nil))))
+   `(mode-line ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--good :box (:color ,construction-paper-theme--background :line-width 4) :underline nil :weight normal :inverse-video nil))))
    `(mode-line-inactive ((t (:inherit mode-line))))
    `(mode-line-buffer-id ((t (:inherit mode-line))))
    `(mode-line-buffer-id-inactive ((t (:inherit mode-line-inactive))))
@@ -133,6 +135,8 @@
    `(powerline-inactive2 ((t (:inherit modeline-inactive :background ,construction-paper-theme--background-medium))))
    `(persp-face-lighter-buffer-not-in-persp ((t (:weight bold :foreground ,construction-paper-theme--inverted-text :background ,construction-paper-theme--alert))))
 
+
+   `(scroll-bar ((t (:foreground ,construction-paper-theme--text :background ,construction-paper-theme--background))))
 
    ;; Font-lock stuff
    `(font-lock-builtin-face ((t (:foreground ,construction-paper-theme--keyword))))
@@ -151,6 +155,9 @@
    `(font-lock-type-face ((t (:foreground ,construction-paper-theme--text))))
    `(font-lock-variable-name-face ((t (:foreground ,construction-paper-theme--text))))
    `(font-lock-warning-face ((t (:foreground ,construction-paper-theme--sun))))
+
+   `(which-func ((t (:inherit variable-pitch :foreground ,construction-paper-theme--soil :weight normal :height 0.8))))
+   `(header-line-path ((t (:inherit variable-pitch :foreground ,construction-paper-theme--moss :weight normal :height 0.8))))
 
    ;; web mode
    `(web-mode-html-tag-face ((t (:inherit font-lock-keyword-face))))
