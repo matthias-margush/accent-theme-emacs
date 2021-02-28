@@ -190,6 +190,7 @@
 
    ;; imenu
    `(imenu-list-entry-face ((t (:foreground ,construction-paper-theme--sun))))
+   `(imenu-list-entry-face-0 ((t (:foreground ,construction-paper-theme--sun))))
    `(imenu-list-entry-face-1 ((t (:foreground ,construction-paper-theme--moss))))
    `(imenu-list-entry-face-2 ((t (:foreground ,construction-paper-theme--water))))
    `(imenu-list-entry-face-3 ((t (:foreground ,construction-paper-theme--soil))))
