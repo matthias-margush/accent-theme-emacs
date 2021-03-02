@@ -426,7 +426,7 @@
    `(company-scrollbar-fg ((t (:background ,construction-paper-theme--inverted-background))))
    `(company-template-field ((t (:inherit region :background ,construction-paper-theme--highlight-background :foreground ,construction-paper-theme--text))))
    `(company-tooltip ((t (:background ,construction-paper-theme--inverted-background-medium :foreground ,construction-paper-theme--inverted-text))))
-   `(company-tooltip-annotation ((t (:foreground ,construction-paper-theme--alert))))
+   `(company-tooltip-annotation ((t (:foreground ,construction-paper-theme--light-dark))))
    `(company-tooltip-common ((t (:background ,construction-paper-theme--inverted-background-medium :foreground ,construction-paper-theme--inverted-text))))
    `(company-tooltip-common-selection ((t (:weight bold :background ,construction-paper-theme--inverted-background-medium :foreground ,construction-paper-theme--inverted-text))))
    `(company-tooltip-selection ((t (:weight bold :background ,construction-paper-theme--inverted-background :foreground ,construction-paper-theme--inverted-text))))
