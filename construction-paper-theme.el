@@ -326,7 +326,7 @@
 
    ;; Search
    `(lazy-highlight-background ((t (:background ,construction-paper-theme--find :weight normal))))
-   `(match ((t (:background ,construction-paper-theme--highlight-foreground))))
+   `(match ((t (:background ,construction-paper-theme--highlight-background))))
    `(isearch ((t (:background ,construction-paper-theme--sky))))
    `(isearch-lazy-highlight-background-face ((t (:box ,construction-paper-theme--added))))
    `(lazy-highlight ((t (:background "#F3F3FF"))))
