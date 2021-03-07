@@ -228,8 +228,8 @@
 
    ;; spacebar
    `(spacebar-persp ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :height 1.0))))
-   `(spacebar-active ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :height 1.2 :weight normal))))
-   `(spacebar-inactive ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--deemphasize :weight normal :height 1.2))))
+   `(spacebar-active ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :height 1.1 :weight normal))))
+   `(spacebar-inactive ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--deemphasize :weight normal :height 1.1))))
 
    ;; smerge
    `(smerge-base ((t (:foreground ,construction-paper-theme--water))))
