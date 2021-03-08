@@ -534,6 +534,12 @@
    `(diredp-symlink ((t (:foreground ,construction-paper-theme--link))))
    `(diredp-write-priv ((t (:foreground ,construction-paper-theme--link :background nil))))
 
+
+    ;; vc
+   `(vc-dir-directory ((t (:inherit variable-pitch :foreground ,construction-paper-theme--shadow-bright :height 1.25))))
+   `(vc-dir-status-edited ((t (:foreground ,construction-paper-theme--moss))))
+   `(vc-dir-file ((t (:foreground ,construction-paper-theme--text :weight bold))))
+
    ;; magit
    `(magit-bisect-bad ((t (:foreground ,construction-paper-theme--alert))))
    `(magit-bisect-good ((t (:foreground ,construction-paper-theme--keyword))))
