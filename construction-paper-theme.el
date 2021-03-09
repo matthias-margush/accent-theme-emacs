@@ -232,13 +232,14 @@
    `(spacebar-inactive ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--deemphasize :weight normal :height 1.1))))
 
    ;; smerge
-   `(smerge-base ((t (:foreground ,construction-paper-theme--water))))
-   `(smerge-base-lower ((t (:foreground ,construction-paper-theme--sun))))
+   `(smerge-base ((t (:foreground ,construction-paper-theme--background-medium))))
+   `(smerge-base-lower ((t (:foreground ,construction-paper-theme--background-medium))))
    `(smerge-markers ((t (:foreground ,construction-paper-theme--deemphasize))))
-   `(smerge-refined-added ((t (:foreground ,construction-paper-theme--added))))
-   `(smerge-refined-changed ((t (:foreground ,construction-paper-theme--changed))))
-   `(smerge-refined-removed ((t (:foreground ,construction-paper-theme--removed))))
-   `(smerge-upper ((t (:foreground ,construction-paper-theme--removed))))
+   `(smerge-refined-added ((t (:background ,construction-paper-theme--added))))
+   `(smerge-refined-changed ((t (:background ,construction-paper-theme--changed))))
+   `(smerge-refined-removed ((t (:background ,construction-paper-theme--removed))))
+   `(smerge-upper ((t (:background ,construction-paper-theme--background-medium))))
+   `(smerge-lower ((t (:background ,construction-paper-theme--background-medium))))
 
    ;; spacemacs
    `(spacemacs-emacs-face ((t (:background ,construction-paper-theme--water :foreground ,construction-paper-theme--inverted-text))))
@@ -565,6 +566,7 @@
    `(magit-diffstat-added ((t (:foreground ,construction-paper-theme--keyword))))
    `(magit-diffstat-removed ((t (:foreground ,construction-paper-theme--alert))))
    `(magit-hash ((t (:foreground ,construction-paper-theme--keyword))))
+   `(magit-header-line ((t (:foreground ,construction-paper-theme--moss :height 1.0))))
    `(magit-log-author ((t (:foreground ,construction-paper-theme--alert))))
    `(magit-process-ng ((t (:inherit magit-section-heading :foreground ,construction-paper-theme--alert))))
    `(magit-process-ok ((t (:inherit magit-section-heading :foreground ,construction-paper-theme--keyword))))
