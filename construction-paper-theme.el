@@ -673,6 +673,14 @@
    `(org-warning ((t (:weight bold :foreground ,construction-paper-theme--keyword))))
    `(org-mode-line-clock-overrun ((t (:weight bold :foreground ,construction-paper-theme--inverted-text :background ,construction-paper-theme--alert))))
 
+   ;; asciidoc
+   `(markup-gen-face ((t (:foreground ,construction-paper-theme--text))))
+   `(markup-title-0-face ((t (:inherit variable-pitch :foreground ,construction-paper-theme--text :height 3.0))))
+   `(markup-title-1-face ((t (:inherit variable-pitch :foreground ,construction-paper-theme--text :height 2.4))))
+   `(markup-title-2-face ((t (:inherit variable-pitch :foreground ,construction-paper-theme--text :height 1.8))))
+   `(markup-title-3-face ((t (:inherit variable-pitch :foreground ,construction-paper-theme--text :height 1.4 :weight bold))))
+   `(markup-title-4-face ((t (:inherit variable-pitch :foreground ,construction-paper-theme--text :height 1.2 :slant italic))))
+
    `(markdown-url-face ((t (:inherit link))))
    `(markdown-header-face ((t (:inherit variable-pitch))))
    `(markdown-link-face ((t (:foreground ,construction-paper-theme--link :underline t))))
