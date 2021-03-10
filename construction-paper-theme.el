@@ -690,6 +690,13 @@
    `(highlight-background-80+ ((t (:background ,construction-paper-theme--text))))
    `(highlight ((t (:background ,construction-paper-theme--added))))
 
+   ;; gotest
+   `(go-test--ok-face ((t (:foreground ,construction-paper-theme--moss))))
+   `(go-test--error-face ((t (:foreground ,construction-paper-theme--fire))))
+   `(go-test--warning-face ((t (:foreground ,construction-paper-theme--sun))))
+   `(go-test--pointer-face ((t (:foreground ,construction-paper-theme--water))))
+   `(go-test--standard-face ((t (:foreground ,construction-paper-theme--text))))
+
    ;; Python-specific overrides
    `(py-builtins-face ((t (:foreground ,construction-paper-theme--keyword :weight normal))))
    ;; Cider
