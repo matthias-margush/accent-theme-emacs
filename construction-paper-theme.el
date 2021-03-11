@@ -420,7 +420,7 @@
 
    ;; Company
    `(company-echo-common ((t (:foreground ,construction-paper-theme--text))))
-   `(company-preview ((t (:height 1.1 :foreground ,construction-paper-theme--text))))
+   `(company-preview ((t (:height 1.0 :foreground ,construction-paper-theme--text))))
    `(company-preview-common ((t (:weight bold :foreground ,construction-paper-theme--text))))
    `(company-preview-search ((t (:weight bold :foreground ,construction-paper-theme--text))))
    `(company-scrollbar-bg ((t (:background "#56585A"))))
