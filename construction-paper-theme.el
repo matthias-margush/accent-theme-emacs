@@ -227,8 +227,8 @@
    `(anzu-replace-to ((t (:background ,construction-paper-theme--good :foreground ,construction-paper-theme--inverted-text))))
 
    ;; spacebar
-   `(spacebar-persp ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :height 1.0))))
-   `(spacebar-active ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--nav :height 0.8 :weight bold))))
+   `(spacebar-persp ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--text :height 1.0))))
+   `(spacebar-active ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--text :height 0.8 :weight bold))))
    `(spacebar-inactive ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--deemphasize :weight normal :height 0.8))))
 
    ;; smerge
