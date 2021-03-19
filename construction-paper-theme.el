@@ -579,7 +579,7 @@
    `(magit-reflog-rebase ((t (:foreground ,construction-paper-theme--alert))))
    `(magit-reflog-remote ((t (:foreground ,construction-paper-theme--link))))
    `(magit-reflog-reset ((t (:foreground ,construction-paper-theme--alert))))
-   `(magit-section-heading ((t (:inherit variable-pitch :foreground ,construction-paper-theme--text))))
+   `(magit-section-heading ((t (:inherit default :foreground ,construction-paper-theme--text))))
    `(magit-section-heading-selection ((t (:inherit variable-pitch :foreground ,construction-paper-theme--text))))
    `(magit-section-highlight ((t (:inherit nil :weight normal))))
    `(magit-sequence-drop ((t (:foreground ,construction-paper-theme--alert))))
