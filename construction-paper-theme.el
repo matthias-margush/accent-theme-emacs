@@ -44,7 +44,7 @@
 (defvar construction-paper-theme--shadow-bright "#687A8D")
 (defvar construction-paper-theme--light-dark "#E3DCCA")
 (defvar construction-paper-theme--light-medium "#f0ecea")
-(defvar construction-paper-theme--light-bright "#F9F9F9")
+(defvar construction-paper-theme--light-bright "#FFFFFF")
 (defvar construction-paper-theme--moss "#557755")
 (defvar construction-paper-theme--fire "#884444")
 (defvar construction-paper-theme--water "#555577")
