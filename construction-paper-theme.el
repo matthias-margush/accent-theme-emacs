@@ -596,6 +596,15 @@
    `(magithub-deleted-thing ((t (:inherit magit-section-highlight-background :background ,construction-paper-theme--alert))))
 
    ;; term and ansi-term
+   `(vterm-color-black ((t (:foreground ,construction-paper-theme--text :background ,construction-paper-theme--text))))
+   `(vterm-color-red ((t (:foreground ,construction-paper-theme--fire :background ,construction-paper-theme--keyword))))
+   `(vterm-color-green ((t (:foreground ,construction-paper-theme--moss :background ,construction-paper-theme--highlight-background))))
+   `(vterm-color-yellow ((t (:foreground ,construction-paper-theme--link :background ,construction-paper-theme--link))))
+   `(vterm-color-blue ((t (:foreground ,construction-paper-theme--water :background ,construction-paper-theme--keyword))))
+   `(vterm-color-magenta ((t (:foreground "#6e6553" :background ,construction-paper-theme--link))))
+   `(vterm-color-white ((t (:foreground ,construction-paper-theme--added :background ,construction-paper-theme--background))))
+   `(vterm-color-cyan ((t (:foreground ,construction-paper-theme--keyword :background ,construction-paper-theme--keyword))))
+
    `(term-color-black ((t (:foreground ,construction-paper-theme--text :background ,construction-paper-theme--text))))
    `(term-color-white ((t (:foreground ,construction-paper-theme--added :background ,construction-paper-theme--background))))
    `(term-color-red ((t (:foreground ,construction-paper-theme--keyword :background ,construction-paper-theme--keyword))))
