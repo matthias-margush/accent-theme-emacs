@@ -335,7 +335,7 @@
 
    ;; evil
    `(evil-search-highlight-background-persist-highlight-background-face ((t (:background ,construction-paper-theme--find :inherit font-lock-warning-face :inverse-video t))))
-   `(evil-ex-lazy-highlight ((t (:foreground ,construction-paper-theme--inverted-text :background ,construction-paper-theme--find))))
+   `(evil-ex-lazy-highlight ((t (:background ,construction-paper-theme--changed))))
    `(evil-ex-info ((t (:foreground ,construction-paper-theme--good))))
    `(evil-ex-substitute-replacement ((t (:underline (:color ,construction-paper-theme--moss)))))
 
