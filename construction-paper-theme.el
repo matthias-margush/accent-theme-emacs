@@ -39,17 +39,18 @@
   :prefix "construction-paper-theme-")
 
 ;;; Code:
-(defvar construction-paper-theme--shadow-dark "#312E2A")
+(defvar construction-paper-theme--shadow-dark "#000000")
 (defvar construction-paper-theme--shadow-medium "#504F4D")
 (defvar construction-paper-theme--shadow-bright "#687A8D")
 (defvar construction-paper-theme--light-dark "#E3DCCA")
-(defvar construction-paper-theme--light-medium "#f0ecea")
+(defvar construction-paper-theme--light-medium "#FFFFFF")
 (defvar construction-paper-theme--light-bright "#FFFFFF")
 (defvar construction-paper-theme--moss "#557755")
 (defvar construction-paper-theme--fire "#884444")
 (defvar construction-paper-theme--water "#555577")
-(defvar construction-paper-theme--sky "#CFE2FF")
-(defvar construction-paper-theme--bark "#c6783e")
+(defvar construction-paper-theme--sky "#DEE4F1")
+;; (defvar construction-paper-theme--bark "#c6783e")
+(defvar construction-paper-theme--bark "#000000")
 (defvar construction-paper-theme--soil "#B2A488")
 ;; (defvar construction-paper-theme--sun "#C6C200")
 (defvar construction-paper-theme--sun "#BBBB69")
@@ -94,7 +95,7 @@
    `(link ((t (:foreground ,construction-paper-theme--link :underline t))))
    `(xref-match ((t (:foreground ,construction-paper-theme--link :underline t))))
    `(link-visited ((t (:foreground ,construction-paper-theme--link))))
-   `(minibuffer-prompt ((t (:inherit default :inverse-video nil))))
+   `(minibuffer-prompt ((t (:inherit default :inverse-video nil :height 1.0))))
    `(helpful-heading ((t (:inherit variable-pitch :height 1.4 :foreground ,construction-paper-theme--text))))
    `(outline-1 ((t (:weight bold :foreground ,construction-paper-theme--text))))
    `(outline-2 ((t (:weight bold :foreground ,construction-paper-theme--text))))
@@ -109,7 +110,7 @@
    `(error ((t (:foreground ,construction-paper-theme--alert :weight bold))))
    `(warning ((t (:foreground ,construction-paper-theme--doc :weight bold))))
    `(success ((t (:foreground ,construction-paper-theme--keyword :weight bold))))
-   `(header-line ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--good :box (:color ,construction-paper-theme--background :line-width 10) :underline nil :weight normal))))
+   `(header-line ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--text :box (:color ,construction-paper-theme--background :line-width 10) :underline nil :weight bold))))
 
    `(escape-glyph ((t (:foreground ,construction-paper-theme--link))))
 
@@ -156,8 +157,8 @@
    `(font-lock-variable-name-face ((t (:foreground ,construction-paper-theme--text))))
    `(font-lock-warning-face ((t (:foreground ,construction-paper-theme--sun))))
 
-   `(which-func ((t (:inherit variable-pitch :foreground ,construction-paper-theme--soil :weight normal :height 0.8))))
-   `(header-line-path ((t (:inherit variable-pitch :foreground ,construction-paper-theme--moss :weight normal :height 0.8))))
+   `(which-func ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--deemphasize :weight normal :height 1.0))))
+   `(header-line-path ((t (:inherit variable-pitch :foreground ,construction-paper-theme--moss :weight normal :height 1.0))))
 
    ;; web mode
    `(web-mode-html-tag-face ((t (:inherit font-lock-keyword-face))))
@@ -227,9 +228,9 @@
    `(anzu-replace-to ((t (:background ,construction-paper-theme--good :foreground ,construction-paper-theme--inverted-text))))
 
    ;; spacebar
-   `(spacebar-persp ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--text :height 1.0))))
-   `(spacebar-active ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--text :height 0.8 :weight bold))))
-   `(spacebar-inactive ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--deemphasize :weight normal :height 0.8))))
+   `(spacebar-persp ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--text :height 1.1))))
+   `(spacebar-active ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--text :height 1.1 :weight bold))))
+   `(spacebar-inactive ((t (:inherit variable-pitch :background ,construction-paper-theme--background :foreground ,construction-paper-theme--deemphasize :weight normal :height 1.1))))
 
    ;; smerge
    `(smerge-base ((t (:foreground ,construction-paper-theme--background-medium))))
@@ -432,9 +433,6 @@
    `(company-tooltip-common ((t (:inherit company-tooltip :weight bold :foreground ,construction-paper-theme--text))))
    `(company-tooltip-common-selection ((t (:weight bold :foreground  ,construction-paper-theme--text))))
    `(company-tooltip-selection ((t (:background ,construction-paper-theme--background-dark :foreground ,construction-paper-theme--text))))
-
-   ;; which-function
-   `(which-func ((t (:foreground ,construction-paper-theme--keyword :background nil :weight bold))))
 
    `(trailing-whitespace ((t (:background ,construction-paper-theme--fire :foreground ,construction-paper-theme--link))))
    `(whitespace-empty ((t (:foreground ,construction-paper-theme--keyword :background ,construction-paper-theme--link))))
@@ -648,12 +646,13 @@
    `(info-menu-star ((t (:foreground ,construction-paper-theme--keyword))))
 
    ;; org-mode
+   `(org-default ((t (:inherit variable-pitch))))
    `(org-agenda-structure ((t (:foreground ,construction-paper-theme--link))))
    `(org-agenda-date ((t (:foreground ,construction-paper-theme--keyword :underline nil))))
    `(org-agenda-done ((t (:foreground ,construction-paper-theme--highlight-background))))
    `(org-agenda-dimmed-todo-face ((t (:foreground ,construction-paper-theme--doc))))
-   `(org-block ((t (:foreground ,construction-paper-theme--text :background ,construction-paper-theme--block :box nil))))
-   `(org-code ((t (:foreground ,construction-paper-theme--link))))
+   `(org-block ((t (:inherit fixed-pitch :foreground ,construction-paper-theme--text :background ,construction-paper-theme--block :box nil))))
+   `(org-code ((t (:inherit fixed-pitch :foreground ,construction-paper-theme--link))))
    `(org-column ((t (:background ,construction-paper-theme--text))))
    `(org-column-title ((t (:inherit org-column :weight bold :underline t))))
    `(org-date ((t (:foreground ,construction-paper-theme--link :underline t))))
@@ -669,13 +668,13 @@
    `(org-link ((t (:inherit link))))
    `(org-meta-line ((t (:foreground ,construction-paper-theme--keyword))))
    `(org-block-end-line ((t (:inherit org-meta-line :weight bold))))
-   `(org-block-begin-line ((t (:inherit org-meta-line :weight bold))))
+   `(org-block-begin-line ((t (:inherit org-meta-line :foreground ,construction-paper-theme--doc :weight normal :underline nil))))
    `(org-scheduled ((t (:foreground ,construction-paper-theme--highlight-background))))
    `(org-scheduled-previously ((t (:foreground ,construction-paper-theme--keyword))))
    `(org-scheduled-today ((t (:foreground ,construction-paper-theme--highlight-background))))
    `(org-special-keyword ((t (:foreground ,construction-paper-theme--keyword))))
    `(org-property-value ((t (:foreground ,construction-paper-theme--keyword))))
-   `(org-table ((t (:foreground ,construction-paper-theme--link))))
+   `(org-table ((t (:inherit fixed-pitch :foreground ,construction-paper-theme--link))))
    `(org-tag ((t (:foreground ,construction-paper-theme--doc))))
    `(org-todo ((t (:inherit default :foreground ,construction-paper-theme--alert))))
    `(org-upcoming-deadline ((t (:foreground ,construction-paper-theme--keyword))))

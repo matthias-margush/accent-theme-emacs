@@ -44,7 +44,7 @@
        (construction-paper-theme--removed "#FFEFEF")
        (construction-paper-theme--changed "#FFFFE2")
        (construction-paper-theme--warning construction-paper-theme--sun)
-       (construction-paper-theme--find "#EFEFFF")
+       (construction-paper-theme--find construction-paper-theme--sky)
        (construction-paper-theme--background construction-paper-theme--light-bright)
        (construction-paper-theme--background-medium construction-paper-theme--light-medium)
        (construction-paper-theme--background-dark construction-paper-theme--light-dark)
