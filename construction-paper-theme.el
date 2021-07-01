@@ -89,7 +89,7 @@
    `(border-glyph ((t (nil))))
    `(cursor ((t (:background ,construction-paper-theme--text))))
    `(default ((t (:background ,construction-paper-theme--background :foreground ,construction-paper-theme--text))))
-   `(fringe ((t (:background ,construction-paper-theme--background))))
+   `(fringe ((t (:inherit default))))
    `(gui-element ((t (:background ,construction-paper-theme--text :foreground ,construction-paper-theme--added))))
    `(highlight-background ((t (:background ,construction-paper-theme--background))))
    `(link ((t (:foreground ,construction-paper-theme--link :underline t))))
@@ -694,7 +694,7 @@
    `(markdown-link-face ((t (:foreground ,construction-paper-theme--link :underline t))))
 
    `(hl-sexp-face ((t (:background ,construction-paper-theme--text))))
-   `(hl-line ((t (:background ,construction-paper-theme--background-medium))))
+   `(hl-line ((t (:background ,construction-paper-theme--sky))))
    `(highlight-background-80+ ((t (:background ,construction-paper-theme--text))))
    `(highlight ((t (:background ,construction-paper-theme--added))))
 
