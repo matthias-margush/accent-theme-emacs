@@ -107,66 +107,69 @@
 
 (defun accent-light-theme-provide ()
   (interactive)
-  (setq accent-theme--accent "#56A375"
-        accent-theme--highlight (accent-theme--lightness accent-theme--accent 0.9)
-        accent-theme--inverted-text accent-theme--highlight
-        accent-theme--text "black"
-        accent-theme--background "white"
+  (setq
+   accent-theme--accent "#56A375"
+   ;; accent-theme--accent "#A35675"
+   accent-theme--highlight (accent-theme--lightness accent-theme--accent 0.9)
+   accent-theme--inverted-text accent-theme--highlight
+   accent-theme--text "black"
+   accent-theme--background "white"
 
-        ;; colors
-        accent-theme--red (accent-theme--hue accent-theme--accent 0.0)
-        accent-theme--yellow (accent-theme--hue accent-theme--accent 60.0)
-        accent-theme--green (accent-theme--hue accent-theme--accent 120.0)
-        accent-theme--cyan (accent-theme--hue accent-theme--accent 180.0)
-        accent-theme--blue (accent-theme--hue accent-theme--accent 240.0)
-        accent-theme--magenta (accent-theme--hue accent-theme--accent 300.0)
+   ;; colors
+   accent-theme--red (accent-theme--hue accent-theme--accent 0.0)
+   accent-theme--yellow (accent-theme--hue accent-theme--accent 60.0)
+   accent-theme--green (accent-theme--hue accent-theme--accent 120.0)
+   accent-theme--cyan (accent-theme--hue accent-theme--accent 180.0)
+   accent-theme--blue (accent-theme--hue accent-theme--accent 240.0)
+   accent-theme--magenta (accent-theme--hue accent-theme--accent 300.0)
 
-        ;; highlighters
-        accent-theme--red-highlight (accent-theme--lightness accent-theme--red 0.8)
-        accent-theme--blue-highlight (accent-theme--lightness accent-theme--blue 0.8)
-        accent-theme--yellow-highlight (accent-theme--lightness accent-theme--yellow 0.8)
-        accent-theme--green-highlight (accent-theme--lightness accent-theme--green 0.8)
-        accent-theme--cyan-highlight (accent-theme--lightness accent-theme--cyan 0.8)
-        accent-theme--magenta-highlight (accent-theme--lightness accent-theme--magenta 0.8)
+   ;; highlighters
+   accent-theme--red-highlight (accent-theme--lightness accent-theme--red 0.8)
+   accent-theme--blue-highlight (accent-theme--lightness accent-theme--blue 0.8)
+   accent-theme--yellow-highlight (accent-theme--lightness accent-theme--yellow 0.8)
+   accent-theme--green-highlight (accent-theme--lightness accent-theme--green 0.8)
+   accent-theme--cyan-highlight (accent-theme--lightness accent-theme--cyan 0.8)
+   accent-theme--magenta-highlight (accent-theme--lightness accent-theme--magenta 0.8)
 
-        ;; backgrounds
-        accent-theme--background (accent-theme--lightness accent-theme--accent 1.0)
-        accent-theme--background-medium (accent-theme--lightness accent-theme--accent 0.97)
-        accent-theme--background-dark (accent-theme--lightness accent-theme--accent 0.94)
+   ;; backgrounds
+   accent-theme--background (accent-theme--lightness accent-theme--accent 1.0)
+   accent-theme--background-medium (accent-theme--lightness accent-theme--accent 0.97)
+   accent-theme--background-dark (accent-theme--lightness accent-theme--accent 0.94)
 
-        ;; inverted backgrounds
-        accent-theme--inverted-background (accent-theme--lightness accent-theme--accent 0.0)
-        accent-theme--inverted-background-medium (accent-theme--lightness accent-theme--accent 0.3)
-        accent-theme--inverted-background-bright (accent-theme--lightness accent-theme--accent 0.6)
+   ;; inverted backgrounds
+   accent-theme--inverted-background (accent-theme--lightness accent-theme--accent 0.0)
+   accent-theme--inverted-background-medium (accent-theme--lightness accent-theme--accent 0.3)
+   accent-theme--inverted-background-bright (accent-theme--lightness accent-theme--accent 0.6)
 
-        accent-theme--shadow-bright accent-theme--inverted-background-medium
-        accent-theme--light-dark accent-theme--background-medium
+   accent-theme--shadow-bright accent-theme--inverted-background-medium
+   accent-theme--light-dark accent-theme--background-medium
 
-        accent-theme--added accent-theme--blue
-        accent-theme--removed accent-theme--red
-        accent-theme--changed accent-theme--yellow
-        accent-theme--added-highlight accent-theme--blue-highlight
-        accent-theme--removed-highlight accent-theme--red-highlight
-        accent-theme--changed-highlight accent-theme--yellow-highlight
+   accent-theme--string accent-theme--accent
+   accent-theme--added accent-theme--blue
+   accent-theme--removed accent-theme--red
+   accent-theme--changed accent-theme--yellow
+   accent-theme--added-highlight accent-theme--blue-highlight
+   accent-theme--removed-highlight accent-theme--red-highlight
+   accent-theme--changed-highlight accent-theme--yellow-highlight
 
-        accent-theme--deemphasize (color-lighten-name accent-theme--text 3)
-        accent-theme--doc accent-theme--deemphasize
-        accent-theme--keyword accent-theme--accent
-        accent-theme--highlight-background accent-theme--highlight
-        accent-theme--highlight-foreground accent-theme--text
-        accent-theme--link accent-theme--accent
-        accent-theme--block accent-theme--background-medium
+   accent-theme--deemphasize (color-lighten-name accent-theme--text 3)
+   accent-theme--doc accent-theme--deemphasize
+   accent-theme--keyword accent-theme--accent
+   accent-theme--highlight-background accent-theme--highlight
+   accent-theme--highlight-foreground accent-theme--text
+   accent-theme--link accent-theme--accent
+   accent-theme--block accent-theme--background-medium
 
-        accent-theme--moss accent-theme--green
-        accent-theme--good accent-theme--green
-        accent-theme--fire accent-theme--red
-        accent-theme--alert accent-theme--red
-        accent-theme--water accent-theme--blue
-        accent-theme--nav accent-theme--blue
-        accent-theme--bark accent-theme--accent
-        accent-theme--soil accent-theme--accent
-        accent-theme--sun accent-theme--yellow
-        accent-theme--warning accent-theme--yellow)
+   accent-theme--moss accent-theme--green
+   accent-theme--good accent-theme--green
+   accent-theme--fire accent-theme--red
+   accent-theme--alert accent-theme--red
+   accent-theme--water accent-theme--blue
+   accent-theme--nav accent-theme--blue
+   accent-theme--bark accent-theme--accent
+   accent-theme--soil accent-theme--accent
+   accent-theme--sun accent-theme--yellow
+   accent-theme--warning accent-theme--yellow)
 
   (accent-theme-faces 'accent-light)
   (provide-theme 'accent-light))
