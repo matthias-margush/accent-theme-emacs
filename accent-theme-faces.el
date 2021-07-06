@@ -95,15 +95,17 @@
 
 
      `(scroll-bar ((t (:foreground ,accent-theme--text :background ,accent-theme--background))))
+     `(yascroll:thumb-text-area ((t (:background ,accent-theme--highlight))))
+     `(yascroll:thumb-fringe ((t (:background ,accent-theme--highlight))))
 
      ;; Font-lock stuff
      `(font-lock-builtin-face ((t (:foreground ,accent-theme--keyword))))
      `(font-lock-comment-delimiter-face ((t (:foreground ,accent-theme--doc))))
      `(font-lock-comment-face ((t (:foreground ,accent-theme--doc))))
-     `(font-lock-constant-face ((t (:foreground ,accent-theme--keyword))))
-     `(font-lock-doc-face ((t (:foreground ,accent-theme--doc))))
-     `(font-lock-doc-string-face ((t (:foreground ,accent-theme--string))))
-     `(font-lock-function-name-face ((t (:foreground ,accent-theme--keyword))))
+     `(font-lock-constant-face ((t (:foreground ,accent-theme--text))))
+     `(font-lock-doc-face ((t (:foreground ,accent-theme--doc :slant italic))))
+     `(font-lock-doc-string-face ((t (:foreground ,accent-theme--doc))))
+     `(font-lock-function-name-face ((t (:foreground ,accent-theme--text))))
      `(font-lock-keyword-face ((t (:foreground ,accent-theme--keyword :weight bold))))
      `(font-lock-negation-char-face ((t (:foreground ,accent-theme--alert))))
      `(font-lock-preprocessor-face ((t (:foreground ,accent-theme--keyword))))
@@ -300,7 +302,7 @@
      ;; Popups
      `(popup-face ((t (:foreground ,accent-theme--text :background ,accent-theme--added))))
      `(popup-isearch-match ((t (:foreground ,accent-theme--background :background ,accent-theme--highlight-background))))
-     `(popup-scroll-bar-background-face ((t (:background ,accent-theme--doc))))
+     `(popup-scroll-bar-background-face ((t (:background ,accent-theme--background))))
      `(popup-scroll-bar-foreground-face ((t (:background ,accent-theme--text))))
      `(popup-summary-face ((t (:foreground ,accent-theme--text))))
      `(popup-tip-face ((t (:background ,accent-theme--inverted-background :foreground ,accent-theme--inverted-text))))

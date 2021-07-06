@@ -40,15 +40,15 @@
 
 ;;; Code:
 
-(require 'accent-light-theme)
+(require 'accent-theme-light)
 
-(accent-light-theme-provide)
+;; (accent-light-theme-provide)
 
-(defun accent-theme-light ()
-  "Enable the construction paper light theme."
-  (interactive)
-  (accent-light-theme-provide)
-  (enable-theme 'accent-light))
+;; (defun accent-theme-light ()
+;;   "Enable the construction paper light theme."
+;;   (interactive)
+;;   (accent-theme-light-provide)
+;;   (enable-theme 'accent-light))
 
 ;; (accent-light-theme-provide)
 (provide 'accent-theme)

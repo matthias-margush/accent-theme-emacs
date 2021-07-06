@@ -33,7 +33,6 @@
 ;; https://github.com/matthias-margush/accent-theme-emacs
 
 ;;; Code:
-(deftheme accent-light)
 
 (require 'accent-theme-faces)
 
@@ -105,15 +104,26 @@
     (apply #'color-rgb-to-hex
            (color-hsl-to-rgb h s lightness))))
 
-(defun accent-light-theme-provide ()
-  (interactive)
+(defun accent-theme--lightness-flip (accent)
+  ""
+  (pcase-let ((`(,h ,s ,l) (apply #'color-rgb-to-hsl (color-name-to-rgb accent))))
+    (message "l: %s" l)
+    (apply #'color-rgb-to-hex
+           (color-hsl-to-rgb h s (- 1.0 l)))))
+
+(defun accent-theme--saturation (accent saturation)
+  ""
+  (pcase-let ((`(,h ,s ,l) (apply #'color-rgb-to-hsl (color-name-to-rgb accent))))
+    (message "l: %s" l)
+    (apply #'color-rgb-to-hex
+           (color-hsl-to-rgb h saturation l))))
+
+(defun accent-theme-provide (theme-name accent adj sat-adj)
   (setq
-   accent-theme--accent "#56A375"
-   ;; accent-theme--accent "#A35675"
-   accent-theme--highlight (accent-theme--lightness accent-theme--accent 0.9)
+   accent-theme--accent (accent-theme--lightness-flip accent)
+   accent-theme--highlight (accent-theme--lightness accent-theme--accent (funcall adj 0.9))
    accent-theme--inverted-text accent-theme--highlight
-   accent-theme--text "black"
-   accent-theme--background "white"
+   accent-theme--text (accent-theme--lightness accent-theme--accent (funcall adj 0.01))
 
    ;; colors
    accent-theme--red (accent-theme--hue accent-theme--accent 0.0)
@@ -124,22 +134,28 @@
    accent-theme--magenta (accent-theme--hue accent-theme--accent 300.0)
 
    ;; highlighters
-   accent-theme--red-highlight (accent-theme--lightness accent-theme--red 0.8)
-   accent-theme--blue-highlight (accent-theme--lightness accent-theme--blue 0.8)
-   accent-theme--yellow-highlight (accent-theme--lightness accent-theme--yellow 0.8)
-   accent-theme--green-highlight (accent-theme--lightness accent-theme--green 0.8)
-   accent-theme--cyan-highlight (accent-theme--lightness accent-theme--cyan 0.8)
-   accent-theme--magenta-highlight (accent-theme--lightness accent-theme--magenta 0.8)
+   accent-theme--red-highlight (accent-theme--lightness accent-theme--red (funcall adj 0.8))
+   accent-theme--blue-highlight (accent-theme--lightness accent-theme--blue (funcall adj 0.8))
+   accent-theme--yellow-highlight (accent-theme--lightness accent-theme--yellow (funcall adj 0.8))
+   accent-theme--green-highlight (accent-theme--lightness accent-theme--green (funcall adj 0.8))
+   accent-theme--cyan-highlight (accent-theme--lightness accent-theme--cyan (funcall adj 0.8))
+   accent-theme--magenta-highlight (accent-theme--lightness accent-theme--magenta (funcall adj 0.8))
 
    ;; backgrounds
-   accent-theme--background (accent-theme--lightness accent-theme--accent 1.0)
-   accent-theme--background-medium (accent-theme--lightness accent-theme--accent 0.97)
-   accent-theme--background-dark (accent-theme--lightness accent-theme--accent 0.94)
+   accent-theme--background (accent-theme--lightness
+                             (color-desaturate-name accent-theme--accent sat-adj)
+                             (funcall adj 1.0))
+   accent-theme--background-medium (accent-theme--lightness
+                                    (color-desaturate-name accent-theme--accent sat-adj)
+                                    (funcall adj 0.96))
+   accent-theme--background-dark (accent-theme--lightness
+                                  (color-desaturate-name accent-theme--accent sat-adj)
+                                  (funcall adj 0.92))
 
    ;; inverted backgrounds
-   accent-theme--inverted-background (accent-theme--lightness accent-theme--accent 0.0)
-   accent-theme--inverted-background-medium (accent-theme--lightness accent-theme--accent 0.3)
-   accent-theme--inverted-background-bright (accent-theme--lightness accent-theme--accent 0.6)
+   accent-theme--inverted-background (accent-theme--lightness accent-theme--accent (funcall adj 0.0))
+   accent-theme--inverted-background-medium (accent-theme--lightness accent-theme--accent (funcall adj 0.2))
+   accent-theme--inverted-background-bright (accent-theme--lightness accent-theme--accent (funcall adj 0.4))
 
    accent-theme--shadow-bright accent-theme--inverted-background-medium
    accent-theme--light-dark accent-theme--background-medium
@@ -152,7 +168,7 @@
    accent-theme--removed-highlight accent-theme--red-highlight
    accent-theme--changed-highlight accent-theme--yellow-highlight
 
-   accent-theme--deemphasize (color-lighten-name accent-theme--text 3)
+   accent-theme--deemphasize (color-lighten-name accent-theme--text 70)
    accent-theme--doc accent-theme--deemphasize
    accent-theme--keyword accent-theme--accent
    accent-theme--highlight-background accent-theme--highlight
@@ -171,9 +187,19 @@
    accent-theme--sun accent-theme--yellow
    accent-theme--warning accent-theme--yellow)
 
-  (accent-theme-faces 'accent-light)
-  (provide-theme 'accent-light))
+  (accent-theme-faces theme-name))
 
-(provide 'accent-light-theme)
+;; (defvar accent-theme-accent "#DDC293")
+(defvar accent-theme-accent "#56A375")
+
+(deftheme accent-light)
+(accent-theme-provide 'accent-light accent-theme-accent (lambda (n) (max 0.0 n)) 0.0)
+
+(deftheme accent-dark)
+(accent-theme-provide 'accent-dark accent-theme-accent (lambda (n) (min 1.0 (- 1.15 n))) 100)
+
+(provide-theme 'accent-light)
+
+(provide 'accent-theme-light)
 
 ;;; constrution-paper-theme-light.el ends here
