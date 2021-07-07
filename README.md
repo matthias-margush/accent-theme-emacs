@@ -1,4 +1,4 @@
-# Construction Paper
+# Accent Theme
 
 A construction paper inspired theme.
 
