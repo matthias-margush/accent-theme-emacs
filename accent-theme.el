@@ -121,16 +121,17 @@
     (apply #'color-rgb-to-hex
            (color-hsl-to-rgb h saturation l))))
 
+;; (apply #'color-rgb-to-hsl (color-name-to-rgb "#3c4c55"))
+
 (defun accent-theme-provide (theme-name accent adj sat-adj)
   (setq
    accent-theme--accent accent
-   ;; (accent-theme--saturation
-   ;;  (accent-theme--lightness-flip accent)
-   ;;  0.7)
 
    accent-theme--highlight (accent-theme--lightness accent-theme--accent (funcall adj 0.9))
    accent-theme--inverted-text accent-theme--highlight
    accent-theme--text (accent-theme--lightness accent-theme--accent (funcall adj 0.01))
+   accent-theme--inverted-text accent-theme--highlight
+   accent-theme--highlight (accent-theme--lightness accent-theme--accent (funcall adj 0.9))
 
    ;; colors
    accent-theme--red (accent-theme--hue accent-theme--accent 0.0)
@@ -179,7 +180,7 @@
    accent-theme--light-dark accent-theme--background-medium
 
    accent-theme--string accent-theme--accent
-   accent-theme--added accent-theme--blue
+   accent-theme--added accent-theme--green
    accent-theme--removed accent-theme--red
    accent-theme--changed accent-theme--yellow
    accent-theme--added-highlight accent-theme--blue-highlight
@@ -211,16 +212,16 @@
 
   (accent-theme-faces theme-name))
 
-;; (defvar accent-theme-accent "#DDC293")
 (defvar accent-theme-accent "#56A375")
-;; (defvar accent-theme-accent "green")
-;; (defvar accent-theme-accent "blue")
 
 (deftheme accent-light)
 (accent-theme-provide 'accent-light accent-theme-accent (lambda (n) (max 0.0 n)) 0.0)
 
 (deftheme accent-dark)
-(accent-theme-provide 'accent-dark accent-theme-accent (lambda (n) (min 1.0 (- 1.15 n))) 100)
+(accent-theme-provide
+ 'accent-dark
+ (accent-theme--lightness-flip accent-theme-accent)
+ (lambda (n) (min 1.0 (- 1.15 n))) 100)
 
 (provide 'accent-theme)
 

@@ -36,7 +36,6 @@
 
 (defun accent-theme-faces (theme-name)
   "Create a accent-theme theme named THEME-NAME."
-  (message "keyword face: %s" accent-theme--keyword)
   (let ((accent-theme--find accent-theme--highlight))
     (custom-theme-set-faces
      theme-name
@@ -67,7 +66,10 @@
      `(error ((t (:foreground ,accent-theme--alert :weight bold))))
      `(warning ((t (:foreground ,accent-theme--doc :weight bold))))
      `(success ((t (:foreground ,accent-theme--keyword :weight bold))))
-     `(header-line ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--text :box (:color ,accent-theme--background :line-width 10) :underline nil :weight bold))))
+
+     ;; header line
+     `(header-line ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--accent :box (:color ,accent-theme--background :line-width 10) :underline t :weight bold :height 1.2))))
+     `(which-func ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--accent :height 1.2 :underline t ))))
 
      `(escape-glyph ((t (:foreground ,accent-theme--link))))
 
@@ -115,9 +117,6 @@
      `(font-lock-type-face ((t (:foreground ,accent-theme--accent))))
      `(font-lock-variable-name-face ((t (:foreground ,accent-theme--text))))
      `(font-lock-warning-face ((t (:foreground ,accent-theme--sun))))
-
-     `(which-func ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--deemphasize :weight normal :height 1.0))))
-     `(header-line-path ((t (:inherit variable-pitch :foreground ,accent-theme--moss :weight normal :height 1.0))))
 
      ;; web mode
      `(web-mode-html-tag-face ((t (:inherit font-lock-keyword-face))))
@@ -437,9 +436,9 @@
      `(diff-refine-changed ((t (:background ,accent-theme--changed-highlight))))
      `(diff-refine-removed ((t (:background ,accent-theme--removed-highlight))))
 
-     `(diff-hl-change ((t (:foreground ,accent-theme--changed-highlight :background ,accent-theme--changed-highlight))))
-     `(diff-hl-delete ((t (:foreground ,accent-theme--removed-highlight :background ,accent-theme--removed-highlight))))
-     `(diff-hl-insert ((t (:foreground ,accent-theme--added-highlight :background ,accent-theme--added-highlight))))
+     `(diff-hl-change ((t (:foreground ,accent-theme--changed :background ,accent-theme--changed))))
+     `(diff-hl-delete ((t (:foreground ,accent-theme--removed :background ,accent-theme--removed))))
+     `(diff-hl-insert ((t (:foreground ,accent-theme--added :background ,accent-theme--added))))
 
      `(ediff-even-diff-A ((t (:foreground nil :background nil :inverse-video t))))
      `(ediff-even-diff-B ((t (:foreground nil :background nil :inverse-video t))))
