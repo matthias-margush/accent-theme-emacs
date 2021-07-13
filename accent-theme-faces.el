@@ -527,7 +527,7 @@
      `(magit-diffstat-added ((t (:foreground ,accent-theme--keyword))))
      `(magit-diffstat-removed ((t (:foreground ,accent-theme--alert))))
      `(magit-hash ((t (:foreground ,accent-theme--keyword))))
-     `(magit-header-line ((t (:foreground ,accent-theme--moss :height 1.0))))
+     `(magit-header-line ((t (:inherit header-line))))
      `(magit-log-author ((t (:foreground ,accent-theme--alert))))
      `(magit-process-ng ((t (:inherit magit-section-heading :foreground ,accent-theme--alert))))
      `(magit-process-ok ((t (:inherit magit-section-heading :foreground ,accent-theme--keyword))))
