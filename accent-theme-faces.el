@@ -67,9 +67,6 @@
      `(warning ((t (:foreground ,accent-theme--doc :weight bold))))
      `(success ((t (:foreground ,accent-theme--keyword :weight bold))))
 
-     ;; header line
-     `(header-line ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--accent :box (:color ,accent-theme--background :line-width 10) :underline t :weight bold :height 1.2))))
-     `(which-func ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--accent :height 1.2 :underline t ))))
 
      `(escape-glyph ((t (:foreground ,accent-theme--link))))
 
@@ -78,8 +75,12 @@
 
      `(highlight-indentation-face ((t (:background ,accent-theme--light-dark))))
 
+     ;; header line
+     `(header-line ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--accent :box (:color ,accent-theme--background :line-width 10) :underline t :weight bold :height 1.2))))
+     `(which-func ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--accent :height 1.2 :underline t ))))
+
      ;; mode line
-     `(mode-line ((t (:background ,accent-theme--background :foreground ,accent-theme--good :box (:color ,accent-theme--background :line-width 4) :underline nil :weight normal :inverse-video nil))))
+     `(mode-line ((t (:inherit header-line))))
      `(mode-line-inactive ((t (:inherit mode-line))))
      `(mode-line-buffer-id ((t (:inherit mode-line))))
      `(mode-line-buffer-id-inactive ((t (:inherit mode-line-inactive))))
