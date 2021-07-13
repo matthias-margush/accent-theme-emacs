@@ -553,6 +553,7 @@
      `(magit-signature-revoked ((t (:foreground ,accent-theme--alert))))
      `(magit-signature-untrusted ((t (:foreground ,accent-theme--link))))
      `(magit-tag ((t (:foreground ,accent-theme--highlight))))
+     `(magit-mode-line-process ((t (:inherit header-line))))
      `(magithub-deleted-thing ((t (:inherit magit-section-highlight-background :background ,accent-theme--alert))))
 
      ;; term and ansi-term
