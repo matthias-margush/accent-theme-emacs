@@ -80,7 +80,7 @@
      `(which-func ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--accent :height 1.2 :underline t ))))
 
      ;; mode line
-     `(mode-line ((t (:inherit header-line))))
+     `(mode-line ((t (:inherit variable-pitch :background ,accent-theme--background :foreground ,accent-theme--accent :underline t :weight bold :height 0.8))))
      `(mode-line-inactive ((t (:inherit mode-line))))
      `(mode-line-buffer-id ((t (:inherit mode-line))))
      `(mode-line-buffer-id-inactive ((t (:inherit mode-line-inactive))))
@@ -100,6 +100,18 @@
      `(scroll-bar ((t (:foreground ,accent-theme--text :background ,accent-theme--background))))
      `(yascroll:thumb-text-area ((t (:background ,accent-theme--highlight))))
      `(yascroll:thumb-fringe ((t (:background ,accent-theme--highlight))))
+
+     ;; corfu
+     `(corfu-default ((t (:inherit default))))
+     `(corfu-current ((t (:inherit highlight))))
+     `(corfu-bar ((t (:inherit default :inverse-video t :background ,accent-theme--background-medium))))
+     `(completions-common-part ((t (:foreground ,accent-theme--accent :inverse-video nil))))
+
+     ;; orderless
+     `(orderless-match-face-0 ((t (:foreground ,accent-theme--accent :inverse-video nil))))
+     `(orderless-match-face-1 ((t (:foreground ,accent-theme--accent :inverse-video nil))))
+     `(orderless-match-face-2 ((t (:foreground ,accent-theme--accent :inverse-video nil))))
+     `(orderless-match-face-3 ((t (:foreground ,accent-theme--accent :inverse-video nil))))
 
      ;; Font-lock stuff
      `(font-lock-builtin-face ((t (:foreground ,accent-theme--keyword))))
@@ -286,11 +298,11 @@
      `(neo-vc-user-face ((t (:foreground ,accent-theme--alert :slant italic))))
 
      ;; Search
-     `(lazy-highlight-background ((t (:background ,accent-theme--highlight :weight normal))))
-     `(match ((t (:background ,accent-theme--highlight))))
-     `(isearch ((t (:background ,accent-theme--highlight))))
-     `(isearch-lazy-highlight-background-face ((t (:box ,accent-theme--highlight))))
-     `(lazy-highlight ((t (:background ,accent-theme--highlight))))
+     `(lazy-highlight-background ((t (:background ,accent-theme--highlight-background :weight normal))))
+     `(match ((t (:background ,accent-theme--highlight-background))))
+     `(isearch ((t (:background ,accent-theme--highlight-background))))
+     `(isearch-lazy-highlight-background-face ((t (:box ,accent-theme--highlight-background))))
+     `(lazy-highlight ((t (:underline (:color ,accent-theme--highlight-background)))))
      `(isearch-fail ((t (:foreground ,accent-theme--alert))))
 
      ;; evil
@@ -437,9 +449,9 @@
      `(diff-refine-changed ((t (:background ,accent-theme--changed-highlight))))
      `(diff-refine-removed ((t (:background ,accent-theme--removed-highlight))))
 
-     `(diff-hl-change ((t (:foreground ,accent-theme--changed :background ,accent-theme--changed))))
-     `(diff-hl-delete ((t (:foreground ,accent-theme--removed :background ,accent-theme--removed))))
-     `(diff-hl-insert ((t (:foreground ,accent-theme--added :background ,accent-theme--added))))
+     `(diff-hl-change ((t (:foreground ,accent-theme--changed-highlight :background ,accent-theme--changed-highlight))))
+     `(diff-hl-delete ((t (:foreground ,accent-theme--removed-highlight :background ,accent-theme--removed-highlight))))
+     `(diff-hl-insert ((t (:foreground ,accent-theme--added-highlight :background ,accent-theme--added-highlight))))
 
      `(ediff-even-diff-A ((t (:foreground nil :background nil :inverse-video t))))
      `(ediff-even-diff-B ((t (:foreground nil :background nil :inverse-video t))))

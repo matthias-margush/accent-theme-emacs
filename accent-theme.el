@@ -70,6 +70,8 @@
 
 (defvar accent-theme--added)
 (defvar accent-theme--changed)
+(defvar accent-theme--removed)
+
 (defvar accent-theme--nav)
 (defvar accent-theme--alert)
 
@@ -91,7 +93,7 @@
 (defvar accent-theme--highlight-background)
 (defvar accent-theme--highlight-foreground)
 (defvar accent-theme--link)
-(defvar accent-theme--removed)
+
 ;; (defvar accent-theme--text)
 (defvar accent-theme--inverted-text)
 
@@ -136,18 +138,21 @@
    ;; colors
    accent-theme--red (accent-theme--hue accent-theme--accent 0.0)
    accent-theme--yellow (accent-theme--hue accent-theme--accent 60.0)
+
+   ;; accent-theme--yellow (accent-theme--saturation (accent-theme--hue accent-theme--accent 60.0) 7.0)
    accent-theme--green (accent-theme--hue accent-theme--accent 120.0)
    accent-theme--cyan (accent-theme--hue accent-theme--accent 180.0)
    accent-theme--blue (accent-theme--hue accent-theme--accent 240.0)
    accent-theme--magenta (accent-theme--hue accent-theme--accent 300.0)
 
    ;; highlighters
-   accent-theme--red-highlight (accent-theme--lightness accent-theme--red (funcall adj 0.8))
-   accent-theme--blue-highlight (accent-theme--lightness accent-theme--blue (funcall adj 0.8))
-   accent-theme--yellow-highlight (accent-theme--lightness accent-theme--yellow (funcall adj 0.8))
-   accent-theme--green-highlight (accent-theme--lightness accent-theme--green (funcall adj 0.8))
-   accent-theme--cyan-highlight (accent-theme--lightness accent-theme--cyan (funcall adj 0.8))
-   accent-theme--magenta-highlight (accent-theme--lightness accent-theme--magenta (funcall adj 0.8))
+   accent-theme--red-highlight (accent-theme--lightness accent-theme--red 0.7)
+   accent-theme--blue-highlight (accent-theme--lightness accent-theme--blue 0.7)
+   ;; accent-theme--yellow-highlight (accent-theme--lightness accent-theme--yellow 0.7)
+   accent-theme--yellow-highlight (accent-theme--saturation (accent-theme--lightness accent-theme--yellow 0.7) 0.7)
+   accent-theme--green-highlight (accent-theme--lightness accent-theme--green 0.7)
+   accent-theme--cyan-highlight (accent-theme--lightness accent-theme--cyan 0.7)
+   accent-theme--magenta-highlight (accent-theme--lightness accent-theme--magenta 0.7)
 
    ;; backgrounds
    accent-theme--background (accent-theme--lightness
@@ -180,10 +185,10 @@
    accent-theme--light-dark accent-theme--background-medium
 
    accent-theme--string accent-theme--accent
-   accent-theme--added accent-theme--green
-   accent-theme--removed accent-theme--red
-   accent-theme--changed accent-theme--yellow
-   accent-theme--added-highlight accent-theme--blue-highlight
+   accent-theme--added accent-theme--green-highlight
+   accent-theme--removed accent-theme--red-highlight
+   accent-theme--changed accent-theme--yellow-highlight
+   accent-theme--added-highlight accent-theme--green-highlight
    accent-theme--removed-highlight accent-theme--red-highlight
    accent-theme--changed-highlight accent-theme--yellow-highlight
 
@@ -194,7 +199,10 @@
 
    accent-theme--doc accent-theme--deemphasize
    accent-theme--keyword accent-theme--accent
+
    accent-theme--highlight-background accent-theme--highlight
+   accent-theme--highlight-background-match (accent-theme--lightness accent-theme--highlight-background 0.95) ;; non-active, "other" matches
+
    accent-theme--highlight-foreground accent-theme--text
    accent-theme--link accent-theme--accent
    accent-theme--block accent-theme--background-medium
