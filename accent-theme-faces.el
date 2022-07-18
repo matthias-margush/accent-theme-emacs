@@ -243,6 +243,11 @@
      ;; table.el
      `(table-cell ((t (:background ,accent-theme--water :foreground ,accent-theme--inverted-text))))
 
+     ;; quick peek
+     `(quick-peek-border-face ((t (:extend t :inherit default :background ,accent-theme--highlight-background :height 0.15))))
+     `(quick-peek-padding-face ((t (:extend t :inherit default :height 0.15))))
+     `(quick-peek-background-face ((t (:extend t :inherit default :background ,accent-theme--background-medium))))
+
      ;; sp
      `(sp-wrap-overlay-closing-pair ((t (:foreground ,accent-theme--fire :background ,accent-theme--sun))))
      `(sp-wrap-overlay-opening-pair ((t (:foreground ,accent-theme--inverted-text :background ,accent-theme--sun))))
@@ -391,10 +396,10 @@
      `(flx-highlight-face ((t (:foreground ,accent-theme--text :underline t))))
 
      ;; Company
-     `(company-echo-common ((t (:foreground ,accent-theme--text))))
-     `(company-preview ((t (:height 1.0 :foreground ,accent-theme--text))))
-     `(company-preview-common ((t (:weight bold :foreground ,accent-theme--text))))
-     `(company-preview-search ((t (:weight bold :foreground ,accent-theme--text))))
+     `(company-echo-common ((t (:foreground ,accent-theme--deemphasize))))
+     `(company-preview ((t (:height 1.0 :foreground ,accent-theme--deemphasize))))
+     `(company-preview-common ((t (:weight bold :foreground ,accent-theme--deemphasize))))
+     `(company-preview-search ((t (:weight bold :foreground ,accent-theme--deemphasize))))
      `(company-scrollbar-bg ((t (:background ,accent-theme--inverted-background))))
      `(company-scrollbar-fg ((t (:background ,accent-theme--inverted-background-medium))))
      `(company-template-field ((t (:background ,accent-theme--inverted-background :foreground ,accent-theme--moss))))
@@ -445,9 +450,9 @@
      `(diff-header ((t (:background ,accent-theme--background-medium :foreground ,accent-theme--text))))
      `(diff-file-header ((t (:background ,accent-theme--background-medium :foreground ,accent-theme--keyword))))
      `(diff-hunk-header ((t (:background ,accent-theme--background-medium :foreground ,accent-theme--link))))
-     `(diff-refine-added ((t (:background ,accent-theme--added-highlight))))
-     `(diff-refine-changed ((t (:background ,accent-theme--changed-highlight))))
-     `(diff-refine-removed ((t (:background ,accent-theme--removed-highlight))))
+     `(diff-refine-added ((t (:background ,accent-theme--added-highlight :foreground ,accent-theme--text))))
+     `(diff-refine-changed ((t (:background ,accent-theme--changed-highlight :foreground ,accent-theme--text))))
+     `(diff-refine-removed ((t (:background ,accent-theme--removed-highlight :foreground ,accent-theme--text))))
 
      `(diff-hl-change ((t (:foreground ,accent-theme--changed-highlight :background ,accent-theme--changed-highlight))))
      `(diff-hl-delete ((t (:foreground ,accent-theme--removed-highlight :background ,accent-theme--removed-highlight))))
@@ -506,7 +511,7 @@
 
 
      ;; vc
-     `(vc-dir-directory ((t (:inherit variable-pitch :foreground ,accent-theme--shadow-bright :height 1.25))))
+     `(vc-dir-directory ((t (:inherit default :foreground ,accent-theme--shadow-bright :height 1.0 :weight bold :slant italic))))
      `(vc-dir-status-edited ((t (:foreground ,accent-theme--moss))))
      `(vc-dir-file ((t (:foreground ,accent-theme--text :weight bold))))
 

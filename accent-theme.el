@@ -185,9 +185,9 @@
    accent-theme--light-dark accent-theme--background-medium
 
    accent-theme--string accent-theme--accent
-   accent-theme--added accent-theme--green-highlight
-   accent-theme--removed accent-theme--red-highlight
-   accent-theme--changed accent-theme--yellow-highlight
+   accent-theme--added accent-theme--green
+   accent-theme--removed accent-theme--red
+   accent-theme--changed accent-theme--yellow
    accent-theme--added-highlight accent-theme--green-highlight
    accent-theme--removed-highlight accent-theme--red-highlight
    accent-theme--changed-highlight accent-theme--yellow-highlight
